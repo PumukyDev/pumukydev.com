@@ -1,0 +1,190 @@
+[
+  {
+    "name": "pi-pumukychat",
+    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
+    "tags": [
+      "react",
+      "docker",
+      "laravel",
+      "nginx-proxy",
+      "encrypted-chat",
+      "tailwindcss"
+    ],
+    "stars": 2,
+    "updated": "3 days ago",
+    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
+  },
+  {
+    "name": "arch-installation",
+    "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
+    "tags": [
+      "xorg",
+      "x11",
+      "arch-linux",
+      "uefi",
+      "grub",
+      "pulseaudio",
+      "refind"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  },
+  {
+    "name": "roundcube",
+    "description": "Self-hosted Roundcube webmail client with Docker Compose.",
+    "tags": [
+      "docker",
+      "email",
+      "imap",
+      "self-hosted",
+      "smtp",
+      "webmail",
+      "roundcube"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  },
+  {
+    "name": "pi-pumukychat",
+    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
+    "tags": [
+      "react",
+      "docker",
+      "laravel",
+      "nginx-proxy",
+      "encrypted-chat",
+      "tailwindcss"
+    ],
+    "stars": 2,
+    "updated": "3 days ago",
+    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
+  },
+  {
+    "name": "arch-installation",
+    "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
+    "tags": [
+      "xorg",
+      "x11",
+      "arch-linux",
+      "uefi",
+      "grub",
+      "pulseaudio",
+      "refind"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  },
+  {
+    "name": "roundcube",
+    "description": "Self-hosted Roundcube webmail client with Docker Compose.",
+    "tags": [
+      "docker",
+      "email",
+      "imap",
+      "self-hosted",
+      "smtp",
+      "webmail",
+      "roundcube"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  },
+  {
+    "name": "pi-pumukychat",
+    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
+    "tags": [
+      "react",
+      "docker",
+      "laravel",
+      "nginx-proxy",
+      "encrypted-chat",
+      "tailwindcss"
+    ],
+    "stars": 2,
+    "updated": "3 days ago",
+    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
+  },
+  {
+    "name": "arch-installation",
+    "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
+    "tags": [
+      "xorg",
+      "x11",
+      "arch-linux",
+      "uefi",
+      "grub",
+      "pulseaudio",
+      "refind"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  },
+  {
+    "name": "roundcube",
+    "description": "Self-hosted Roundcube webmail client with Docker Compose.",
+    "tags": [
+      "docker",
+      "email",
+      "imap",
+      "self-hosted",
+      "smtp",
+      "webmail",
+      "roundcube"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  },
+  {
+    "name": "pi-pumukychat",
+    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
+    "tags": [
+      "react",
+      "docker",
+      "laravel",
+      "nginx-proxy",
+      "encrypted-chat",
+      "tailwindcss"
+    ],
+    "stars": 2,
+    "updated": "3 days ago",
+    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
+  },
+  {
+    "name": "arch-installation",
+    "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
+    "tags": [
+      "xorg",
+      "x11",
+      "arch-linux",
+      "uefi",
+      "grub",
+      "pulseaudio",
+      "refind"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  },
+  {
+    "name": "roundcube",
+    "description": "Self-hosted Roundcube webmail client with Docker Compose.",
+    "tags": [
+      "docker",
+      "email",
+      "imap",
+      "self-hosted",
+      "smtp",
+      "webmail",
+      "roundcube"
+    ],
+    "stars": 0,
+    "updated": "yesterday",
+    "cover": ""
+  }
+]
