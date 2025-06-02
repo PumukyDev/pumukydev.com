@@ -1,23 +1,43 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilo general */
 body {
   font-family: 'Inter', system-ui, sans-serif;
   background-color: #0f172a;
   color: #e2e8f0;
-  display: flex;
   min-height: 100vh;
-  overflow-y: auto;
   scroll-behavior: smooth;
 }
 
+p {
+  white-space: pre-line;
+}
+
+
+/* Envoltorio centrado para evitar scroll lateral */
+.container {
+  display: flex;
+  max-width: 1400px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+/* Sidebar izquierdo */
 header {
-    width: 49vw;
-    height: 100vh;
-    padding: 3rem;
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  width: 49%;
+  height: 100vh;
+  padding: 3rem;
+  position: fixed;
+  left: 1100;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 header h2 {
@@ -71,6 +91,7 @@ header nav ul li a:hover {
   color: #f8fafc;
 }
 
+/* Redes sociales */
 #social-media {
   display: flex;
   gap: 1.25rem;
@@ -98,9 +119,11 @@ header nav ul li a:hover {
 }
 
 main {
-  margin-left: 49vw;
-  width: 49vw;
+  margin-left: 46.0%;
+  width: 51.0%;
+  padding: 3rem 2rem;
 }
+
 
 main section {
   margin-bottom: 4rem;
@@ -113,31 +136,15 @@ main h2 {
   color: #f8fafc;
 }
 
-.project-card {
-  padding: 1rem 0 1.5rem;
-  margin-bottom: 2rem;
-  max-width: 655px;
-}
-
-/* .project-card:hover {
-  background-color: #334155;
-  border-radius: 0.5rem;
-}
-
-.project-card:hover .project-title,
-.project-card:hover .project-description,
-.project-card:hover .project-meta {
-  color: #f8fafc;
-} */
-
+/* Proyectos */
 .project-card {
   position: relative;
-  padding: 1rem 1.5rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #1e293b;
   border-radius: 0.5rem;
   z-index: 0;
   overflow: hidden;
+  max-width: 655px;
 }
 
 .project-card::before {
@@ -216,4 +223,3 @@ main h2 {
 .load-button:hover {
   background-color: #64748b;
 }
-  

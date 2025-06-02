@@ -1,34 +1,135 @@
 [
   {
-    "name": "pi-pumukychat",
-    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
-    "tags": [
-      "react",
-      "docker",
-      "laravel",
-      "nginx-proxy",
-      "encrypted-chat",
-      "tailwindcss"
-    ],
-    "stars": 2,
-    "updated": "3 days ago",
-    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
-  },
-  {
     "name": "arch-installation",
     "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
     "tags": [
-      "xorg",
-      "x11",
       "arch-linux",
-      "uefi",
       "grub",
+      "paru",
       "pulseaudio",
-      "refind"
+      "qtile",
+      "refind",
+      "uefi",
+      "x11",
+      "xorg"
     ],
     "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
+    "updated": "4 days ago",
+    "cover": "/static/previews/arch-installation.png"
+  },
+  {
+    "name": "Assignment1-DHCP-schema",
+    "description": null,
+    "tags": [],
+    "stars": 0,
+    "updated": "228 days ago",
+    "cover": "/static/previews/Assignment1-DHCP-schema.png"
+  },
+  {
+    "name": "curso-de-git",
+    "description": "Aprendiendo git y github",
+    "tags": [],
+    "stars": 0,
+    "updated": "317 days ago",
+    "cover": "/static/previews/curso-de-git.png"
+  },
+  {
+    "name": "dhcp-server",
+    "description": null,
+    "tags": [],
+    "stars": 0,
+    "updated": "217 days ago",
+    "cover": "/static/previews/dhcp-server.png"
+  },
+  {
+    "name": "ftp-server",
+    "description": "A complete environment with two FTP servers (one for anonymous users and one for local users) and a DNS server, all deployed using Ansible and Vagrant",
+    "tags": [
+      "ansible",
+      "dns-server",
+      "filezilla",
+      "ftp",
+      "ftp-server",
+      "vagrant"
+    ],
+    "stars": 1,
+    "updated": "62 days ago",
+    "cover": "/static/previews/ftp-server.png"
+  },
+  {
+    "name": "HashArt",
+    "description": null,
+    "tags": [],
+    "stars": 0,
+    "updated": "214 days ago",
+    "cover": "/static/previews/HashArt.png"
+  },
+  {
+    "name": "load-balancer",
+    "description": null,
+    "tags": [],
+    "stars": 0,
+    "updated": "132 days ago",
+    "cover": "/static/previews/load-balancer.png"
+  },
+  {
+    "name": "pi-pumukychat",
+    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
+    "tags": [
+      "docker",
+      "encrypted-chat",
+      "laravel",
+      "nginx-proxy",
+      "react",
+      "tailwindcss"
+    ],
+    "stars": 2,
+    "updated": "1 day ago",
+    "cover": "/static/previews/pi-pumukychat.png"
+  },
+  {
+    "name": "poland",
+    "description": "Diary from my Erasmus stay in Wroc\u0142aw.",
+    "tags": [
+      "diary",
+      "erasmus",
+      "poland",
+      "wroclaw"
+    ],
+    "stars": 3,
+    "updated": "0 days ago",
+    "cover": "/static/previews/poland.png"
+  },
+  {
+    "name": "PumuArch",
+    "description": "This repository contains my personal dotfiles. ",
+    "tags": [
+      "arch-linux",
+      "dotfiles",
+      "qtile"
+    ],
+    "stars": 4,
+    "updated": "106 days ago",
+    "cover": "/static/previews/PumuArch.png"
+  },
+  {
+    "name": "PumukyDev",
+    "description": "Config files for my GitHub profile.",
+    "tags": [
+      "config",
+      "github-config"
+    ],
+    "stars": 0,
+    "updated": "102 days ago",
+    "cover": "/static/previews/PumukyDev.png"
+  },
+  {
+    "name": "pumukydev.github.io",
+    "description": null,
+    "tags": [],
+    "stars": 0,
+    "updated": "98 days ago",
+    "cover": "/static/previews/pumukydev.github.io.png"
   },
   {
     "name": "roundcube",
@@ -37,154 +138,89 @@
       "docker",
       "email",
       "imap",
+      "rouncube",
       "self-hosted",
       "smtp",
-      "webmail",
-      "roundcube"
+      "webmail"
     ],
     "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
+    "updated": "4 days ago",
+    "cover": "/static/previews/roundcube.png"
   },
   {
-    "name": "pi-pumukychat",
-    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
-    "tags": [
-      "react",
-      "docker",
-      "laravel",
-      "nginx-proxy",
-      "encrypted-chat",
-      "tailwindcss"
-    ],
-    "stars": 2,
-    "updated": "3 days ago",
-    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
-  },
-  {
-    "name": "arch-installation",
-    "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
-    "tags": [
-      "xorg",
-      "x11",
-      "arch-linux",
-      "uefi",
-      "grub",
-      "pulseaudio",
-      "refind"
-    ],
-    "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
-  },
-  {
-    "name": "roundcube",
-    "description": "Self-hosted Roundcube webmail client with Docker Compose.",
+    "name": "self-hosting",
+    "description": "Docker setup for a reverse proxy using Nginx with HTTPS support and dynamic DNS updates via IONOS API.",
     "tags": [
       "docker",
-      "email",
-      "imap",
-      "self-hosted",
-      "smtp",
-      "webmail",
-      "roundcube"
+      "dyndns",
+      "ionos",
+      "nginx",
+      "reverse-proxy",
+      "self-hosting"
     ],
     "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
+    "updated": "13 days ago",
+    "cover": "/static/previews/self-hosting.png"
   },
   {
-    "name": "pi-pumukychat",
-    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
+    "name": "squirrelmail",
+    "description": null,
+    "tags": [],
+    "stars": 0,
+    "updated": "109 days ago",
+    "cover": "/static/previews/squirrelmail.png"
+  },
+  {
+    "name": "SRI",
+    "description": "Repository where I will post the exercises from the SRI subject",
+    "tags": [],
+    "stars": 0,
+    "updated": "130 days ago",
+    "cover": "/static/previews/SRI.png"
+  },
+  {
+    "name": "stream-server",
+    "description": "Dockerized streaming server that integrates a Telegram bot for downloading and serving video/audio content. It allows users to stream media directly from a web interface, powered by Nginx and Icecast.",
     "tags": [
-      "react",
+      "audio",
       "docker",
-      "laravel",
-      "nginx-proxy",
-      "encrypted-chat",
-      "tailwindcss"
-    ],
-    "stars": 2,
-    "updated": "3 days ago",
-    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
-  },
-  {
-    "name": "arch-installation",
-    "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
-    "tags": [
-      "xorg",
-      "x11",
-      "arch-linux",
-      "uefi",
-      "grub",
-      "pulseaudio",
-      "refind"
+      "ffmpeg",
+      "icecast",
+      "nginx",
+      "nodejs",
+      "streaming",
+      "telegram-bot",
+      "video"
     ],
     "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
+    "updated": "13 days ago",
+    "cover": "/static/previews/stream-server.png"
   },
   {
-    "name": "roundcube",
-    "description": "Self-hosted Roundcube webmail client with Docker Compose.",
+    "name": "ublock-yt-minimal",
+    "description": "uBlock Origin filter list to hide all YouTube suggestions, allowing you to focus solely on the video content.",
     "tags": [
-      "docker",
-      "email",
-      "imap",
-      "self-hosted",
-      "smtp",
-      "webmail",
-      "roundcube"
+      "blocker",
+      "no-distractions",
+      "ublock-origin",
+      "youtube"
     ],
     "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
+    "updated": "13 days ago",
+    "cover": "/static/previews/ublock-yt-minimal.png"
   },
   {
-    "name": "pi-pumukychat",
-    "description": "Secure and modern real-time chat app built with Laravel, React, Docker, and end-to-end encryption.",
+    "name": "url-shortener",
+    "description": "Apache server deployment made with Vagrant +  Ansible, include a url-shortener and a server status page with grafana and prometheus",
     "tags": [
-      "react",
-      "docker",
-      "laravel",
-      "nginx-proxy",
-      "encrypted-chat",
-      "tailwindcss"
+      "apache",
+      "grafana",
+      "php",
+      "prometheus",
+      "web"
     ],
-    "stars": 2,
-    "updated": "3 days ago",
-    "cover": "https://raw.githubusercontent.com/yourusername/pi-pumukychat/main/cover.png"
-  },
-  {
-    "name": "arch-installation",
-    "description": "Step-by-step guide to install Arch Linux on an UEFI system.",
-    "tags": [
-      "xorg",
-      "x11",
-      "arch-linux",
-      "uefi",
-      "grub",
-      "pulseaudio",
-      "refind"
-    ],
-    "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
-  },
-  {
-    "name": "roundcube",
-    "description": "Self-hosted Roundcube webmail client with Docker Compose.",
-    "tags": [
-      "docker",
-      "email",
-      "imap",
-      "self-hosted",
-      "smtp",
-      "webmail",
-      "roundcube"
-    ],
-    "stars": 0,
-    "updated": "yesterday",
-    "cover": ""
+    "stars": 3,
+    "updated": "78 days ago",
+    "cover": "/static/previews/url-shortener.png"
   }
 ]

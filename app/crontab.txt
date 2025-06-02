@@ -1,0 +1,1 @@
+0 3 * * * cd /app && /usr/local/bin/python update_projects.py >> /var/log/cron.log 2>&1
