@@ -14,7 +14,7 @@
       "xorg"
     ],
     "stars": 0,
-    "updated": "4 days ago",
+    "updated": "6 days ago",
     "cover": "/static/previews/arch-installation.png"
   },
   {
@@ -22,7 +22,7 @@
     "description": null,
     "tags": [],
     "stars": 0,
-    "updated": "228 days ago",
+    "updated": "229 days ago",
     "cover": "/static/previews/Assignment1-DHCP-schema.png"
   },
   {
@@ -30,7 +30,7 @@
     "description": "Aprendiendo git y github",
     "tags": [],
     "stars": 0,
-    "updated": "317 days ago",
+    "updated": "319 days ago",
     "cover": "/static/previews/curso-de-git.png"
   },
   {
@@ -38,7 +38,7 @@
     "description": null,
     "tags": [],
     "stars": 0,
-    "updated": "217 days ago",
+    "updated": "219 days ago",
     "cover": "/static/previews/dhcp-server.png"
   },
   {
@@ -53,7 +53,7 @@
       "vagrant"
     ],
     "stars": 1,
-    "updated": "62 days ago",
+    "updated": "64 days ago",
     "cover": "/static/previews/ftp-server.png"
   },
   {
@@ -61,7 +61,7 @@
     "description": null,
     "tags": [],
     "stars": 0,
-    "updated": "214 days ago",
+    "updated": "216 days ago",
     "cover": "/static/previews/HashArt.png"
   },
   {
@@ -69,7 +69,7 @@
     "description": null,
     "tags": [],
     "stars": 0,
-    "updated": "132 days ago",
+    "updated": "134 days ago",
     "cover": "/static/previews/load-balancer.png"
   },
   {
@@ -84,7 +84,7 @@
       "tailwindcss"
     ],
     "stars": 2,
-    "updated": "1 day ago",
+    "updated": "3 days ago",
     "cover": "/static/previews/pi-pumukychat.png"
   },
   {
@@ -109,7 +109,7 @@
       "qtile"
     ],
     "stars": 4,
-    "updated": "106 days ago",
+    "updated": "108 days ago",
     "cover": "/static/previews/PumuArch.png"
   },
   {
@@ -120,7 +120,7 @@
       "github-config"
     ],
     "stars": 0,
-    "updated": "102 days ago",
+    "updated": "104 days ago",
     "cover": "/static/previews/PumukyDev.png"
   },
   {
@@ -128,7 +128,7 @@
     "description": null,
     "tags": [],
     "stars": 0,
-    "updated": "98 days ago",
+    "updated": "100 days ago",
     "cover": "/static/previews/pumukydev.github.io.png"
   },
   {
@@ -144,7 +144,7 @@
       "webmail"
     ],
     "stars": 0,
-    "updated": "4 days ago",
+    "updated": "5 days ago",
     "cover": "/static/previews/roundcube.png"
   },
   {
@@ -159,7 +159,7 @@
       "self-hosting"
     ],
     "stars": 0,
-    "updated": "13 days ago",
+    "updated": "14 days ago",
     "cover": "/static/previews/self-hosting.png"
   },
   {
@@ -167,7 +167,7 @@
     "description": null,
     "tags": [],
     "stars": 0,
-    "updated": "109 days ago",
+    "updated": "111 days ago",
     "cover": "/static/previews/squirrelmail.png"
   },
   {
@@ -175,7 +175,7 @@
     "description": "Repository where I will post the exercises from the SRI subject",
     "tags": [],
     "stars": 0,
-    "updated": "130 days ago",
+    "updated": "131 days ago",
     "cover": "/static/previews/SRI.png"
   },
   {
@@ -193,7 +193,7 @@
       "video"
     ],
     "stars": 0,
-    "updated": "13 days ago",
+    "updated": "14 days ago",
     "cover": "/static/previews/stream-server.png"
   },
   {
@@ -206,7 +206,7 @@
       "youtube"
     ],
     "stars": 0,
-    "updated": "13 days ago",
+    "updated": "14 days ago",
     "cover": "/static/previews/ublock-yt-minimal.png"
   },
   {
@@ -220,7 +220,7 @@
       "web"
     ],
     "stars": 3,
-    "updated": "78 days ago",
+    "updated": "80 days ago",
     "cover": "/static/previews/url-shortener.png"
   }
 ]

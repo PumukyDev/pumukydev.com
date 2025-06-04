@@ -1,0 +1,49 @@
+{% for card in cards %}
+  {% if card.cover %}
+    <div class="project-card">
+      <img src="{{ card.cover }}" alt="{{ card.name }}">
+      <div class="project-content">
+        <h2 class="project-title">{{ card.name }}</h2>
+        {% if card.description %}
+          <p class="project-description">{{ card.description }}</p>
+        {% endif %}
+        {% if card.stars or card.updated %}
+          <div class="project-meta">
+            {% if card.stars %}⭐ {{ card.stars }}{% endif %}
+            {% if card.updated %} — Updated {{ card.updated }}{% endif %}
+          </div>
+        {% endif %}
+        {% if card.tags %}
+          <div class="tags">
+            {% for tag in card.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if card.duration and card.website %}
+    <div class="experience-card"
+         role="link"
+         tabindex="0"
+         onclick="window.open('{{ card.website }}', '_blank')">
+      <div class="experience-left">
+        <span class="card-date">{{ card.duration }}</span>
+      </div>
+      <div class="experience-right">
+        <span class="experience-position">{{ card.position }} ·</span>
+        <span class="experience-company">{{ card.company }}</span>
+        <p class="experience-description">{{ card.description }}</p>
+        {% if card.tags %}
+          <div class="tags">
+            {% for tag in card.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}
