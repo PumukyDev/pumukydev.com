@@ -22,9 +22,15 @@
         </a>
         <nav>
           <ul>
-            <li><a href="#about"><span>ABOUT</span></a></li>
-            <li><a href="#experience"><span>EXPERIENCE</span></a></li>
-            <li><a href="#projects"><span>PROJECTS</span></a></li>
+            <li class="nav-item">
+              <a href="#about" data-section="about"><span class="nav-line"></span><span class="nav-text">ABOUT</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" data-section="experience"><span class="nav-line"></span><span class="nav-text">EXPERIENCE</span></a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" data-section="projects"><span class="nav-line"></span><span class="nav-text">PROJECTS</span></a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -49,15 +55,16 @@
     <main>
       <section id="about">
         <p>
-          I'm a cybersecurity enthusiast passionate about building secure, automated systems that defend against modern threats without compromising usability. My interests lie in offensive security, ethical hacking, networking, and Linux.
+          I'm an IT professional focused on <strong>cybersecurity</strong> and <strong>systems administration</strong>, with hands-on experience on <strong>networking</strong> and <strong>ethical hacking</strong>.
 
-          Currently studying cybersecurity, I spend much of my time breaking and securing systems to better understand how they work. My work often involves exploiting web applications, hardening them, and developing custom scripts and tools to automate security processes efficiently.
+          I enjoy working on both the <strong>defensive and offensive</strong> sides of security, whether it's hardening infrastructure, automating tasks, or analyzing how systems behave under pressure.
 
-          As an open source advocate, I enjoy fine-tuning my Linux environment to be fully keyboard-driven, aiming for maximum performance, minimal distraction, and complete control.
+          My daily workflow revolves around a <strong>Linux</strong> environment, where I aim for simplicity, speed, and full control over my tools. I'm also passionate about <strong>open source</strong> and continuous learning through real-world projects and experimentation.
         </p>
       </section>
 
       <section id="experience">
+        <h2>Experience</h2>
         <div id="experience-cards"
              hx-get="/cards/experience?page=1"
              hx-trigger="load"
@@ -65,18 +72,10 @@
              hx-swap="innerHTML">
           Loading...
         </div>
-        <button class="load-more"
-                hx-get="/cards/experience?page=2"
-                hx-target="#experience-cards"
-                hx-swap="beforeend">
-          Load More
-          <svg class="load-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="currentColor"/>
-          </svg>
-        </button>
       </section>
 
       <section id="projects">
+        <h2>Projects</h2>
         <div id="project-cards"
              hx-get="/cards/projects?page=1"
              hx-trigger="load"
@@ -84,17 +83,9 @@
              hx-swap="innerHTML">
           Loading...
         </div>
-        <button class="load-more"
-                hx-get="/cards/projects?page=2"
-                hx-target="#project-cards"
-                hx-swap="beforeend">
-          Load More
-          <svg class="load-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="currentColor"/>
-          </svg>
-        </button>
       </section>
     </main>
   </div>
+  <script src="/static/main.js"></script>
 </body>
 </html>

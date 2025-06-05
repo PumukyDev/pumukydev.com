@@ -3,28 +3,35 @@
     <div class="card"
          role="link"
          tabindex="0"
-         onclick="window.open('{{ card.website }}', '_blank')">
+         onclick="window.open('{{ card.github }}', '_blank')">
       <div class="card-left">
         <img src="{{ card.cover }}" alt="{{ card.name }}">
       </div>
       <div class="card-right">
-        <h2>{{ card.name }}</h2>
-        <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
-        {% if card.description %}
-          <p>{{ card.description }}</p>
-        {% endif %}
-        {% if card.tags %}
-          <div class="tags">
-            {% for tag in card.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
+        <h3 data-title>{{ card.name }}</h3>
+        <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path>
+        </svg>
+        <p>{{ card.description }}</p>
+        {% if card.website %}
+          <div class="try-iy-out">
+            <a href="{{ card.website }}">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <path d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z"></path>
+                <path d="M11.603 7.963a.75.75 0 00-.977 1.138 2.5 2.5 0 01.142 3.667l-3 3a2.5 2.5 0 01-3.536-3.536l1.225-1.224a.75.75 0 00-1.061-1.06l-1.224 1.224a4 4 0 105.656 5.656l3-3a4 4 0 00-.225-5.865z"></path>
+              </svg>
+              <span>Try it out</span>
+            </a>
           </div>
         {% endif %}
+        <div class="tags">
+          {% for tag in card.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
       </div>
     </div>
-  {% endif %}
-
-  {% if card.duration and card.website %}
+  {% elif card.duration and card.website %}
     <div class="card"
          role="link"
          tabindex="0"
@@ -33,17 +40,31 @@
         <span class="card-date">{{ card.duration }}</span>
       </div>
       <div class="card-right">
-        <h2>{{ card.position }} · {{ card.company }}</h2>
-        <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+        <h3>{{ card.position }} · {{ card.company }}</h3>
+        <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 14.78a.75.75 0 001.06 0l7.22-7.22v5.69a.75.75 0 001.5 0v-7.5a.75.75 0 00-.75-.75h-7.5a.75.75 0 000 1.5h5.69l-7.22 7.22a.75.75 0 000 1.06z" clip-rule="evenodd"></path></svg>
+        <h4>{{ card.modality }} · {{ card.location }}</h4>
         <p>{{ card.description }}</p>
         {% if card.tags %}
-          <div class="tags">
-            {% for tag in card.tags %}
-              <span class="tag">{{ tag }}</span>
-            {% endfor %}
-          </div>
+        <div class="tags">
+          {% for tag in card.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
         {% endif %}
       </div>
     </div>
   {% endif %}
 {% endfor %}
+
+{% if next_page %}
+  <button class="load-more"
+          id="load-more-button"
+          hx-get="{{ request.path }}?page={{ next_page }}"
+          hx-target="#load-more-button"
+          hx-swap="outerHTML">
+    Load More
+    <svg class="load-arrow" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.5523 3 13 3.44772 13 4V17.5858L18.2929 12.2929C18.6834 11.9024 19.3166 11.9024 19.7071 12.2929C20.0976 12.6834 20.0976 13.3166 19.7071 13.7071L12.7071 20.7071C12.3166 21.0976 11.6834 21.0976 11.2929 20.7071L4.29289 13.7071C3.90237 13.3166 3.90237 12.6834 4.29289 12.2929C4.68342 11.9024 5.31658 11.9024 5.70711 12.2929L11 17.5858V4C11 3.44772 11.4477 3 12 3Z" fill="currentColor"/>
+    </svg>
+  </button>
+{% endif %}
