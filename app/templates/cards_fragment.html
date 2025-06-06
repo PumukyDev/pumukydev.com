@@ -4,9 +4,6 @@
          role="link"
          tabindex="0"
          onclick="window.open('{{ card.github }}', '_blank')">
-      <div class="card-left">
-        <img src="{{ card.cover }}" alt="{{ card.name }}">
-      </div>
       <div class="card-right">
         <h3 data-title>{{ card.name }}</h3>
         <svg class="link-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -29,6 +26,9 @@
             <span class="tag">{{ tag }}</span>
           {% endfor %}
         </div>
+      </div>
+      <div class="card-left">
+        <img class="card-cover" src="{{ card.cover }}" alt="{{ card.name }}" >
       </div>
     </div>
   {% elif card.duration and card.website %}
