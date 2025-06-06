@@ -15,7 +15,7 @@ def load_json_data(filename):
     with open(path, encoding='utf-8') as f:
         return json.load(f)
 
-def paginate(data, page, per_page=3):
+def paginate(data, page, per_page=4):
     start = (page - 1) * per_page
     end = start + per_page
     return data[start:end]
