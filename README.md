@@ -1,24 +1,15 @@
-<h1 align="center">
-    pumukydev.com
-</h1>
-<p align="center">
-    My personal portfolio, built with Flask and deployed with Docker
-</p>
+# pumukydev.com
 
 <p align="center">
     <img src="assets/portfolio.png" alt="portfolio preview">
 </p>
 
----
-
-## Requirements
+## 📦 Requirements
 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
----
-
-## Setup Instructions
+## 🛠️ Setup Instructions
 
 ### 1. Clone the repository
 
@@ -42,15 +33,11 @@ cd pumukydev.com
 
 3. Replace the content in `/app/templates/index.html` and other static files to reflect your own work and personal info.
 
----
-
 ### 3. Deploy the server
 
 ```bash
 docker-compose up -d --build
 ```
-
----
 
 ### 4. See the web
 
@@ -59,9 +46,7 @@ Visit [http://localhost:8000](http://localhost:8000)
 If you want to deploy it publicly, check this guide where I explain how to self-host it:  
 👉 [https://github.com/PumukyDev/self-hosting](https://github.com/PumukyDev/self-hosting)
 
----
-
-## Fork this project
+## 🔁 Fork this project
 
 If this template was useful to you:
 
@@ -70,8 +55,6 @@ If this template was useful to you:
 - Don’t forget to **mention** `@PumukyDev` if you use or get inspired by it — I’d love to see your version!
 - Contributions and stars are always welcome 🤍
 
----
-
-## License
+## 📄 License
 
 This project is open-source and available under the [MIT License](LICENSE).
