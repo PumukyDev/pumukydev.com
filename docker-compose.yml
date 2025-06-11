@@ -1,17 +1,13 @@
 services:
   web:
     build: ./app
-    ports:
-      - "8000:5000"
     restart: unless-stopped
     container_name: flask_portfolio
-    volumes:
-      - ./app:/app
     env_file:
       - ./app/.env
-#     networks:
-#       - proxy-network
+    networks:
+      - proxy-network
 
-# networks:
-#   proxy-network:
-#     external: true
+networks:
+  proxy-network:
+    external: true
