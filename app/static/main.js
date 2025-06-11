@@ -52,6 +52,6 @@ function scrollSpy() {
   }
 
   window.addEventListener('scroll', activateSection);
-  window.addEventListener('load', activateSection); // activa al cargar
+  window.addEventListener('load', activateSection);
 }
 scrollSpy();

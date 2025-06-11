@@ -32,6 +32,6 @@ def cards_fragment(section):
 
     page = int(request.args.get('page', 1))
     sliced = paginate(data, page)
-    next_page = page + 1 if page * 5 < len(data) else None
+    next_page = page + 1 if page * 4 < len(data) else None
 
     return render_template('cards_fragment.html', cards=sliced, next_page=next_page)

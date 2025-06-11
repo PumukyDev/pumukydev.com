@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-OWNER = "PumukyDev"
+OWNER = os.getenv("OWNER")
 HEADERS = {
     "Authorization": f"Bearer {GITHUB_TOKEN}",
     "Accept": "application/vnd.github+json"
@@ -71,6 +71,12 @@ def update_projects():
         if repo["fork"] or repo["name"] in blacklist:
             continue
 
+        description = repo.get("description") or ""
+        topics = repo.get("topics", [])
+
+        if not description.strip() or not topics:
+            continue
+
         name = repo["name"]
         print(f"Processing {name}...")
         try:
@@ -87,15 +93,15 @@ def update_projects():
 
         homepage = repo.get("homepage")
         if homepage:
-            if homepage.startswith("https://pumukydev.github.io"):
+            if homepage.startswith("https://{OWNER}.github.io"):
                 score += 20
             else:
                 score += 50
 
         project = {
             "name": name,
-            "description": repo.get("description", ""),
-            "tags": repo.get("topics", []),
+            "description": description,
+            "tags": topics,
             "stars": repo["stargazers_count"],
             "updated": format_updated_at(repo["updated_at"]),
             "cover": f"/static/previews/{name}.png" if image_url else "",
@@ -103,7 +109,7 @@ def update_projects():
             "score": score
         }
 
-        if homepage and not homepage.startswith("https://pumukydev.github.io"):
+        if homepage and not homepage.startswith("https://{OWNER}.github.io"):
             project["website"] = homepage
 
         result.append(project)
