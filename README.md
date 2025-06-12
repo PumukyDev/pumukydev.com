@@ -31,7 +31,9 @@ cd pumukydev.com
    - Add your **GitHub token** (you can generate one [here](https://github.com/settings/tokens)). It only needs `public_repo` permissions.
    - Add your **GitHub username**.
 
-3. Replace the content in `/app/templates/index.html` and other static files to reflect your own work and personal info.
+3. Replace the content in `/app/templates/index.html` and `/app/data/experience.json` to reflect your own professional experience and personal info.
+
+4. To exclude any of your repositories from being shown, list their names in `/app/blacklist.txt`.
 
 ### 3. Deploy the server
 
