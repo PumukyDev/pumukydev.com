@@ -8,6 +8,7 @@ load_dotenv()
 
 GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 OWNER = os.getenv("OWNER")
+
 HEADERS = {
     "Authorization": f"Bearer {GITHUB_TOKEN}",
     "Accept": "application/vnd.github+json"
@@ -18,16 +19,18 @@ PREVIEW_DIR = os.path.join("static", "previews")
 os.makedirs(PREVIEW_DIR, exist_ok=True)
 
 def load_blacklist(path="blacklist.txt"):
+    """Load a list of blacklisted repository names from file."""
     if not os.path.exists(path):
         return set()
     with open(path, "r") as f:
         return set(line.strip() for line in f if line.strip())
 
-def get_opengraph_image(repo):
+def get_opengraph_image(repo_name):
+    """Fetch the Open Graph image URL for a given repository using GitHub GraphQL API."""
     query = {
         "query": f"""
         {{
-          repository(owner: "{OWNER}", name: "{repo}") {{
+          repository(owner: "{OWNER}", name: "{repo_name}") {{
             openGraphImageUrl
           }}
         }}
@@ -37,6 +40,7 @@ def get_opengraph_image(repo):
     return response.json()["data"]["repository"]["openGraphImageUrl"]
 
 def format_updated_at(iso_date):
+    """Format the repository update date as 'X days ago'."""
     dt = datetime.fromisoformat(iso_date.rstrip("Z")).replace(tzinfo=timezone.utc)
     now = datetime.now(timezone.utc)
     delta = now - dt
@@ -44,10 +48,11 @@ def format_updated_at(iso_date):
     return f"{days} day{'s' if days != 1 else ''} ago"
 
 def calculate_score(stars, updated_at):
+    """Compute a custom score based on stars and recency of updates."""
     score = stars * 5
     dt = datetime.fromisoformat(updated_at.rstrip("Z")).replace(tzinfo=timezone.utc)
-    now = datetime.now(timezone.utc)
-    days = (now - dt).days
+    days = (datetime.now(timezone.utc) - dt).days
+
     if days <= 5:
         score += 20
     elif days <= 20:
@@ -56,19 +61,23 @@ def calculate_score(stars, updated_at):
         score += 5
     elif days <= 365:
         score += 1
+
     return score
 
 def update_projects():
-    res = requests.get(API_URL, headers=HEADERS)
-    res.raise_for_status()
-    repos = res.json()
+    """Fetch repositories, process metadata, and generate the projects.json file."""
+    response = requests.get(API_URL, headers=HEADERS)
+    response.raise_for_status()
+    repos = response.json()
 
-    result = []
-
+    projects = []
     blacklist = load_blacklist()
 
     for repo in repos:
-        if repo["fork"] or repo["name"] in blacklist:
+        name = repo["name"]
+
+        # Skip forks and blacklisted repositories
+        if repo["fork"] or name in blacklist:
             continue
 
         description = repo.get("description") or ""
@@ -77,8 +86,8 @@ def update_projects():
         if not description.strip() or not topics:
             continue
 
-        name = repo["name"]
         print(f"Processing {name}...")
+
         try:
             image_url = get_opengraph_image(name)
             if image_url:
@@ -86,14 +95,14 @@ def update_projects():
                 with open(os.path.join(PREVIEW_DIR, f"{name}.png"), "wb") as f:
                     f.write(image_data)
         except Exception as e:
-            print(f"⚠️  Could not fetch image for {name}: {e}")
+            print(f"Could not fetch image for {name}: {e}")
             image_url = ""
 
         score = calculate_score(repo["stargazers_count"], repo["updated_at"])
 
         homepage = repo.get("homepage")
         if homepage:
-            if homepage.startswith("https://{OWNER}.github.io"):
+            if homepage.startswith(f"https://{OWNER}.github.io"):
                 score += 20
             else:
                 score += 50
@@ -109,18 +118,20 @@ def update_projects():
             "score": score
         }
 
-        if homepage and not homepage.startswith("https://{OWNER}.github.io"):
+        # I don't want to store documentation web pages (which usually start with my name.github.io)
+        if homepage and not homepage.startswith(f"https://{OWNER}.github.io"):
             project["website"] = homepage
 
-        result.append(project)
+        projects.append(project)
 
-    result.sort(key=lambda r: r["score"], reverse=True)
+    # Sort projects by score in descending order
+    projects.sort(key=lambda p: p["score"], reverse=True)
 
     os.makedirs("data", exist_ok=True)
     with open("data/projects.json", "w") as f:
-        json.dump(result, f, indent=2)
+        json.dump(projects, f, indent=2)
 
-    print("✅ Repositorios actualizados.")
+    print("Projects updated successfully.")
 
 if __name__ == "__main__":
     update_projects()

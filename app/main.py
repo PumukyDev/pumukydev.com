@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, abort
-import json, os
+import json
+import os
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -16,12 +17,17 @@ def load_json_data(filename):
         return json.load(f)
 
 def paginate(data, page, per_page=4):
+    """Return a slice of data for the given page."""
     start = (page - 1) * per_page
     end = start + per_page
     return data[start:end]
 
 @app.route('/cards/<section>')
 def cards_fragment(section):
+    """
+    Return a fragment of cards for the given section (projects or experience).
+    Includes pagination via the 'page' query parameter.
+    """
     if section not in ['projects', 'experience']:
         abort(404)
 
