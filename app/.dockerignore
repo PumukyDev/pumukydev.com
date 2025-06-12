@@ -1,5 +1,3 @@
-data/projects.json
-static/previews/
 Dockerfile
 .env.example
 .dockerignore
